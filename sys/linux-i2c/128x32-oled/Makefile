@@ -6,7 +6,7 @@ SRC = $(shell ls ../../../csrc/*.c) $(shell ls ../common/*.c) main.c
 OBJ = $(SRC:.c=.o) 
 
 helloworld: $(OBJ) 
-	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) -li2c -o helloworld
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) -li2c -lqrencode -o helloworld
 
 clean:	
 	-rm -f $(OBJ) helloworld
